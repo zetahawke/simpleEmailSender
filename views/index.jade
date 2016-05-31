@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  form(method='POST', action='/')
+    table(style='width:100%')
+        tr
+          th desde:
+          td
+            input#email_from(type='email', name='email_from')
+        tr
+          th contraseña:
+          td
+            input#pass(type='pass', name='pass')
+        tr
+          th para:
+          td
+            input#email_to(type='email', name='email_to')
+        tr
+          th caso:
+          td
+            input#consult(type='text', name='consult')
+        tr
+          th observación:
+          td
+            textarea#myText
+      input(type='submit', value='enviar')
