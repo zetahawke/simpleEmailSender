@@ -15,10 +15,10 @@ router.post('/', handleSayHello); // handle the route at yourdomain.com/sayHello
 function handleSayHello(req, res) {
 	debugger;
     // Not the movie transporter!
-    var email_from = req.body.email_from;
-    var pass = req.body.pass;
-    var to = req.body.email_to;
-    var subject = req.body.consult;
+    var email_from = req.body.text3;
+    var pass = req.body.text4;
+    var to = req.body.text2;
+    var subject = req.body.text1;
 
     var transporter = nodemailer.createTransport({
         service: 'Gmail',
@@ -27,7 +27,7 @@ function handleSayHello(req, res) {
             pass:  pass// Your password
         }
     });
-	var text = req.body.myText;
+	var text = req.body.textarea1;
 
 	var mailOptions = {
 	    from: email_from, // sender address
